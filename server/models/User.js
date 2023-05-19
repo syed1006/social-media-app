@@ -23,7 +23,11 @@ const userSchema = new Schema({
     contact:{
         type: Number
     },
-    image:{
+    profileimage:{
+        type: String,
+        default: 'to be added'
+    },
+    coverimage:{
         type: String,
         default: 'to be added'
     },
@@ -45,3 +49,6 @@ const userSchema = new Schema({
     }
 
 }, {timestamps: true});
+
+const User = mongoose.model('user', userSchema);
+module.exports = User;
